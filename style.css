@@ -1,0 +1,319 @@
+/*-- Main Menu Styles--*/
+
+html{
+  width: 100%;
+  background-color: #191201;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    width: 100%;
+    margin: 0px;
+  }
+
+li{ 
+    display: inline-block;
+    padding: 1em 2em 2em 1em;
+    float: right;
+}
+
+li:first-child{
+    float:left;
+}
+
+nav {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2em;
+  position: relative;
+  z-index: 100;
+}
+
+nav a:link, nav a:visited {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover, nav a:active  {
+  color: white;
+  text-decoration: underline;
+}
+nav a.active {
+  color: #F0F0F0;
+}
+
+.header-img {
+  width: 100%;
+  height: 700px;
+  background: url(../img/sword_header.jpg);
+  background-size: cover;
+}
+
+h2{
+  font-family: 'Nabla', cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+footer{
+  color: whitesmoke;
+}
+
+.button-container{
+  padding-bottom: 100px;
+  padding-top: 0px;
+  margin: 0px;
+}
+
+.header_content{
+  box-sizing: content-box;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.fas {
+  font-size: 1.5rem;
+  color: white;
+  padding-left: 0.5rem;
+  padding-bottom: 2.5rem;
+  padding-top: 0;
+  vertical-align:text-top;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.btn {
+  position: absolute;
+  top: 55%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); 
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: white; 
+  padding: 2rem 6rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.title_descript{
+  position: absolute;
+  padding: 0px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0px;
+  top: 12rem;
+  left: 40%;
+  font-size: 2.75rem;  
+  width: 55%;
+  font-family: 'Oswald', sans-serif;
+  line-height: 3.5rem;
+  font-weight: 300;
+  color: white;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.right-nav {
+  visibility: visible;
+}
+
+/* character grid */
+.grid-item{ 
+  background: lightsalmon;
+  padding: 0;
+  margin: 0;
+  /*height: 350px;
+  max-height: 100em;*/
+  background-size:cover;
+  backface-visibility: hidden;
+  border-radius: 65px;
+}
+
+.grid-container{
+  padding: 1rem 1rem 1rem 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "one two three four"
+  "five six seven eight";
+}
+
+.grid-container > p:nth-child(1) {
+  grid-area: one;
+}
+.grid-container > p:nth-child(2) {
+  grid-area: two;
+}
+.grid-container > p:nth-child(3) {
+  grid-area: three;
+}
+.grid-container > p:nth-child(4) {
+  grid-area: four;
+}
+.grid-container > p:nth-child(5) {
+  grid-area: five;
+}
+.grid-container > p:nth-child(6) {
+  grid-area: six;
+}
+.grid-container > p:nth-child(7) {
+  grid-area: seven;
+}
+.grid-container > p:nth-child(8) {
+  grid-area: eight;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+}
+
+.grid-item:hover {
+  transition: .5s ease;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.characterBox {
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  /*box-shadow: 50px 50px 50px white;*/
+}
+
+.textBox {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  width:100%;
+  padding: 4rem;
+  margin: 0;
+}
+
+.characterBox:hover .image {
+  opacity: 0.3;
+}
+
+.characterBox:hover .textBox {
+  opacity: 1;
+}
+
+.text {
+  background-color: white;
+  opacity: 0.4;
+  color: black;
+  font-size: 1.1rem;
+  padding: 2rem ;
+  border-radius: 20px;
+}
+
+  /*-- Media Queries --*/
+@media screen and (min-width: 200px) {
+  .title_descript{
+    width: 50%;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+  "one" 
+  "two"
+  "three" 
+  "four"
+  "five"
+  "six"
+  "seven"
+  "eight";
+  }
+  .right-nav {
+    visibility: hidden;
+  }
+}
+@media screen and (min-width: 768px) {
+  .title_descript{
+    width: 50%;
+    font-size: 1.9rem;
+    line-height: 3.2rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+  "one two"
+   "three four"
+   "five six"
+  "seven eight";
+  }
+  .right-nav {
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .title_descript{
+    width: 50%;
+    font-size: 2.3rem;
+    line-height: 3.3rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+  "one two three" 
+  "four five six"
+  "seven eight";
+  }
+  .right-nav {
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .title_descript{
+    width: 50%;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+  "one two three four"
+  "five six seven eight";
+  }
+  .right-nav {
+    visibility: visible;
+  }
+}

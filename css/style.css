@@ -10,12 +10,14 @@ nav ul {
     padding: 0px;
     width: 100%;
     margin: 0px;
+    background: #7ceba5;
   }
 
 li{ 
     display: inline-block;
     padding: 1em 2em 2em 1em;
     float: right;
+    background: #7ceba5;
 }
 
 li:first-child{
@@ -27,6 +29,7 @@ nav {
   font-size: 2em;
   position: relative;
   z-index: 100;
+  background: #7ceba5;
 }
 
 nav a:link, nav a:visited {

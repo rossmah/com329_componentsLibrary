@@ -13,101 +13,6 @@ body{
   margin: 0;
 }
 
-/*
-nav ul {
-    list-style: none;
-    padding: 0px;
-    width: 100%;
-    margin: 0px;
-    background: #7ceba5;
-  }
-
-li{ 
-    display: inline-block;
-    padding: 1em 2em 2em 1em;
-    float: right;
-    background: #7ceba5;
-}
-
-li:first-child{
-    float:left;
-}
-
-nav {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2em;
-  position: relative;
-  z-index: 100;
-  background: #7ceba5;
-}
-
-nav a:link, nav a:visited {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-nav a:hover, nav a:active  {
-  color: white;
-  text-decoration: underline;
-}
-nav a.active {
-  color: #F0F0F0;
-}
-
-.header-img {
-  width: 100%;
-  height: 700px;
-  background: url(../img/sword_header.jpg);
-  background-size: cover;
-}
-
-h2{
-  font-family: 'Nabla', cursive;
-  font-size: 3rem;
-  text-align: center;
-}
-
-footer{
-  color: whitesmoke;
-}
-
-.button-container{
-  padding-bottom: 100px;
-  padding-top: 0px;
-  margin: 0px;
-}
-
-.header_content{
-  box-sizing: content-box;
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  padding-bottom: 1rem;
-  overflow: hidden;
-  backface-visibility: hidden;
-}
-
-.fas {
-  font-size: 1.5rem;
-  color: white;
-  padding-left: 0.5rem;
-  padding-bottom: 2.5rem;
-  padding-top: 0;
-  vertical-align:text-top;
-}
-*/
-
-
-/* A simple, css only, (some-what) responsive menu */
-/*
-body { 
-  background: #ccc;
-  font-family: helvetica, arial, serif;
-  font-size: 13px;
-  text-transform: uppercase;
-  text-align: center;
-}
- */
 
  /*------------------------NAV MENU HORIZONTAL-----------------------*/
 .wrap_nav1 {
@@ -135,7 +40,6 @@ body {
   float: left;
 }
 
-/* clear'n floats */
 .ul_nav1:after {
   clear: both;
 }
@@ -155,7 +59,6 @@ body {
   box-shadow: 2px 2px 3px #888;
 }
 
-/* prime */
 .ul_nav1.primary .li_nav1 .a_nav1 {
   display: block;
   padding: 20px 30px;
@@ -166,12 +69,10 @@ body {
   border-right: none;
 }
 
-.ul_nav1.primary .li_nav1 .a_nav1:hover {
-  
+.ul_nav1.primary .li_nav1 .a_nav1:hover {  
   color: #000;
 }
 
-/* subs */
 .ul_nav1.sub {
   position: absolute;
   z-index: 200;
@@ -201,13 +102,11 @@ body {
   background: #eeeeee;
 }
 
-/* sub display*/
 .ul_nav1.primary .li_nav1:hover .ul_nav1 {
   display: block;
   background: #fff;
 }
 
-/* keeps the tab background white */
 .ul_nav1.primary .li_nav1:hover .a_nav1 {
   background: #fff;
   color: #666;
@@ -271,7 +170,6 @@ body {
   --cornerRad: 4px;
 }
 .container_nav2 {
-  /*background-color: var(--primColor);*/
   font-size: 20px;
 }
 .details_nav2 {
@@ -281,8 +179,6 @@ body {
   writing-mode: vertical-lr;
   text-align: center;
   padding: 15px;
-  /*width: 23px;
-  height: 17px;*/
   background-color: var(--primColor);
   border: 2px solid var(--secoColor);
   border-radius: var(--cornerRad);
@@ -464,7 +360,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -488,7 +383,7 @@ input:checked + .slider:before {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;
   border-radius: 10px;
 }
@@ -535,7 +430,6 @@ input:checked + .slider:before {
 }
 
 .a_button {
-  /*display: block;*/
   margin: 0 10px;
   padding: 15px 0;
   width: 130px;
@@ -563,7 +457,6 @@ a:active {
 }
 /*--------------------------------HORIZONTAL MEDIA CARD--------------------------------*/
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
 
 .blog_post {
   background: #fff;
@@ -572,11 +465,12 @@ a:active {
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
   position: relative;
   margin: auto;
-  display: flex;
+ /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
   margin-top: 3rem;
   margin-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .container_copy {
@@ -589,18 +483,23 @@ a:active {
   padding-left: 1rem;
   padding-right: 1rem;
   grid-gap: 5%;
-  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
   grid-template-areas:
   "one one two";
 }
 
-.gridContainer_horizontal > p:nth-child(1) {
+.gridContainer_horizontal:nth-child(1) {
   grid-area: one;
 }
-.gridContainer_horizontal > p:nth-child(2) {
+.gridContainer_horizontal:nth-child(2) {
   grid-area: two;
 }
+.gridContainer_horizontal:nth-child(3) {
+  grid-area: three;
+}
 
+/*
 .body_horizontal {
   height: 100vh;
   display: flex;
@@ -611,6 +510,7 @@ a:active {
   background: -webkit-linear-gradient(to right, #2b32b2, #1488cc);
   background: linear-gradient(to right, #2b32b2, #1488cc);
 }
+*/
 
 
 .img_horizontal {
@@ -636,7 +536,6 @@ a:active {
 }
 
 .p_horizontal {
-  margin: 0 0 3rem 0;
   font-size: 1.5rem;
   line-height: 1.45;
   color: #333;
@@ -654,9 +553,10 @@ a:active {
   transition: all 0.2s ease-in;
   text-decoration: none;
   margin: 0 auto;
-  /*margin-top: 2rem;*/
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: block;
-  width: 15rem;
+  width: 60%;
   text-align: center;
 }
 
@@ -664,20 +564,7 @@ a:active {
   box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
 }
 
-/*@media only screen and (max-width: 650px) {
-  body {
-    background-color: black;
-  }
-
-  .img_pod {
-
-  }
-}*/
-
-
-
-
-/* ---------------VERTICAL MEDIA CARD ------------ */
+/* -----------------------------------VERTICAL MEDIA CARD ----------------------------------- */
 :root {
   --surface-color: #fff;
   --curve: 40;
@@ -798,9 +685,7 @@ body {
 
 
 
-/* -----------------------------------------------*/
-
-/* TEXT EFFECTS*/
+/* ------------------------------------------- TEXT EFFECTS ---------------------------------------*/
 /* ------------- COLOR GRADIENT ------------------ */
 .h1_gradient {
   font-size: 5rem;
@@ -845,9 +730,7 @@ body {
   padding-bottom: 4rem;
   margin: 0;
   color: #fcedd8;
-  /*background: #ff7158;
-   /*background: #d52e3f;font-family: 'Niconne', cursive;*/
-   font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico', cursive;
   font-weight: 700;
   text-shadow: 5px 5px 0px #ff2323, 
               10px 10px 0px #eb452b,
@@ -879,60 +762,11 @@ font-size:0.8rem;
 
 }
 
-/*
-
-/* Style the button and place it in the middle of the container/image 
-.btn {
-  position: absolute;
-  top: 55%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); 
-  font-family: 'Josefin Sans', sans-serif;
-  background-color: white; 
-  padding: 2rem 6rem;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  font-weight: 700;
-}
-
-.title_descript{
-  position: absolute;
-  padding: 0px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: 0px;
-  top: 12rem;
-  left: 40%;
-  font-size: 2.75rem;  
-  width: 55%;
-  font-family: 'Oswald', sans-serif;
-  line-height: 3.5rem;
-  font-weight: 300;
-  color: white;
-  overflow: hidden;
-  backface-visibility: hidden;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.right-nav {
-  visibility: visible;
-}
-
-*/
 
 
 
 
-/* --------------------------------------- */
-  /*-- Media Queries --*/
+/*----------------------------------------------- Media Queries -----------------------------------------------*/
 @media screen and (min-width: 200px) {
   .title_descript{
     width: 50%;
@@ -954,7 +788,17 @@ body {
   .right-nav {
     visibility: hidden;
   }
+
+  .gridContainer_horizontal{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "two"
+    "one"
+    "one";
+  }
 }
+
+
 @media screen and (min-width: 768px) {
   .title_descript{
     width: 50%;
@@ -972,7 +816,17 @@ body {
   .right-nav {
     visibility: visible;
   }
+
+  .gridContainer_horizontal{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "two"
+    "one"
+    "one";
+  }
 }
+
+
 @media screen and (min-width: 1280px) {
   .title_descript{
     width: 50%;
@@ -989,7 +843,15 @@ body {
   .right-nav {
     visibility: visible;
   }
+
+  .gridContainer_horizontal{
+    grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+  "one two";
+  }
 }
+
+
 @media screen and (min-width: 1440px) {
   .title_descript{
     width: 50%;
@@ -1004,5 +866,11 @@ body {
   }
   .right-nav {
     visibility: visible;
+  }
+
+  .gridContainer_horizontal{
+    grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+  "one two";
   }
 }
